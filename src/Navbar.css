@@ -1,0 +1,59 @@
+.li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+}
+.navbar{
+    background-color: rgb(255, 38, 0);
+    height: 130px;
+}
+.navlink{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-top:-10px;
+    margin-left: 10px;
+    list-style-type: none;
+    text-decoration: none;
+  
+}
+.input-box{
+    width:550px;
+    margin-left: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    
+    
+}
+.btn{
+    padding: 13px;
+    background:rgb(255, 38, 0) ;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: -10px;
+    width: 200px;
+    margin-top: 4px;
+}
+
+.btn1{
+    padding: 15px;
+    width: 130px;
+    background:rgb(6, 6, 6) ;
+    border-radius: 10px;
+    margin-top: -50px;
+    margin-left: -15px;
+    margin-top: 4px;
+}
+
+
+

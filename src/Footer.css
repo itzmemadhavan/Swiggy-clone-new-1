@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+    
+}
+footer{
+    width: 100vw;
+   margin-top: 100px;
+   padding: 100px;
+   padding-left: 400px;
+    border: 2px solid white;
+    background-color: azure;
+   
+}
+
+.LI{
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: rgb(30, 28, 28);
+    display: block;
+    font-family: sans-serif;
+}
+h4{
+    margin-left: 50px;
+    font-family: sans-serif;
+}
+ul{
+    margin-top: 50px;
+}
+p{
+    margin-top: 250px;
+    margin-left: -150px;
+}
+h2{
+    color: rgb(91, 89, 89);
+    margin-left: 550px;
+
+}

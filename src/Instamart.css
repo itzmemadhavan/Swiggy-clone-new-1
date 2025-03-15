@@ -1,0 +1,25 @@
+.nav-bar{
+    background-color: rgb(234, 230, 230);
+    width:1300px;
+    height:100%;
+    margin-left: 300px;
+}
+
+
+.content{
+    margin-left: 50px;
+    font-family: sans-serif;
+    
+}
+.imgs{
+ width:150px;
+ margin-left: 20px;
+ margin-top: 10px;
+}
+.imgs1{
+    
+        width:150px;
+        margin-left: 15px;
+        margin-top: 10px;
+       
+}
