@@ -26,7 +26,7 @@ export default function Instamart(){
                     <img src="./Rice.png" alt="not found"  className='imgs'/>
                     <img src="./meat.png" alt="not found"  className='imgs'/>
 
-                </div><hr  style={{width:'1200px'}}/>
+                </div><hr />
                 <div className="content">
                     <h4>SNACKS & DRINKS</h4>
                     <img src="./snaks.avif" alt="not found" className='imgs1'/>
@@ -37,7 +37,7 @@ export default function Instamart(){
                     <img src="./frozonefoods.avif" alt="not found"  className='imgs1'/>
                     <img src="./sauces.avif" alt="not found"  className='imgs1' />
 
-                </div><hr  style={{width:'1200px'}}/>
+                </div><hr/>
                 <div className="content">
                     <h4>BEAUTY & WELLNESS</h4>
                     <img src="./beauty1.avif" alt="not found" className='imgs1'/>
@@ -48,7 +48,7 @@ export default function Instamart(){
                     <img src="./beauty6.avif" alt="not found"  className='imgs1'/>
                     <img src="./beauty7.avif" alt="not found"  className='imgs1' />
 
-                </div><hr  style={{width:'1200px'}}/>
+                </div><hr />
                 <div className="content">
                     <h4>HOUSEHOLD & LIFESTYLE</h4>
                     <img src="./home1.avif" alt="not found" className='imgs1'/>
@@ -59,16 +59,16 @@ export default function Instamart(){
                     <img src="./home6.avif" alt="not found"  className='imgs1'/>
                     <img src="./home7.avif" alt="not found"  className='imgs1' />
 
-                </div><hr  style={{width:'1200px'}}/>
+                </div><hr />
                 <div className="content">
                 <h4>TRENDING TODAY</h4>
                 </div>
                 <video width="1300" autoPlay muted loop style={{marginRight:'150px'}}>
                 <source src="./video4.mp4" type="video/mp4" />
                 </video>  
-                <hr  style={{width:'1200px'}}/>
+                <hr/>
 
-                <img src="./banner.png" alt="not available" style={{width:'1300px'}}/>
+                <img src="./banner.png" alt="not available" className='banner'/>
                 
                 </div> 
                 
