@@ -1,36 +1,54 @@
-import {BrowserRouter, Route, Link, Routes} from 'react-router-dom';
-import Home from './Home';
-import Food from './Food';
-import Instamart from './Instamart';
-import Signin from './Signin';
-import Footer from './Footer';
-import './Navbar.css';
+import { useState } from "react";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import Home from "./Home";
+import Food from "./Food";
+import Instamart from "./Instamart";
+import Signin from "./Signin";
+import Footer from "./Footer";
+import { FiMenu, FiX } from "react-icons/fi"; // Import icons for mobile menu
+import "./Navbar.css";
 
-function Navbar(){
-    return(
-        <div >
-            <BrowserRouter>
-            <nav className='navbar'>
-                <img src="./logo.png" alt="" style={{width:'190px',margin:'50px'}} className="logo" />
-                <input type="text" placeholder='Search Your Favorites' className='input-box'/>
-                <ul className='navlink'>
-                    <li style={{marginTop:'50px'}}><Link to='/'className='link'>Home </Link> </li>
-                    <li style={{marginTop:'50px'}}><Link to='/food'className='link'>Food Delivery</Link></li>
-                    <li style={{marginTop:'50px'}}><Link to='/instamart'className='link'>Instamart </Link></li>
-                    <li style={{marginTop:'50px'}}><Link to='/signin'className='link'>Signin </Link></li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path='/' element={<Home/>}></Route>
-                <Route path='/food' element={<Food />}></Route>
-                <Route path='/instamart' element={<Instamart />}></Route>
-                <Route path='/signin' element={<Signin />}></Route>
-                
-            </Routes>
-            </BrowserRouter>
-            <Footer />
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <BrowserRouter>
+      <nav className="navbar">
+        <div className="nav-header">
+          <img src="./logo.png" alt="Logo" className="logo" />
+          <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </button>
         </div>
 
-    )
+        <input type="text" placeholder="Search Your Favorites" className="input-box" />
+
+        <ul className={`navlink ${menuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/" className="link" onClick={() => setMenuOpen(false)}>Home</Link>
+          </li>
+          <li>
+            <Link to="/food" className="link" onClick={() => setMenuOpen(false)}>Food Delivery</Link>
+          </li>
+          <li>
+            <Link to="/instamart" className="link" onClick={() => setMenuOpen(false)}>Instamart</Link>
+          </li>
+          <li>
+            <Link to="/signin" className="link" onClick={() => setMenuOpen(false)}>Signin</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/instamart" element={<Instamart />} />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
+  );
 }
+
 export default Navbar;
