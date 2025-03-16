@@ -11,7 +11,13 @@ export default function Foods() {
     { name: "Night Lion By Madhampatti", src: "./rest3.avif", time: "25-40 min", location: "Peelamedu" },
     { name: "Thirupathi Mess", src: "./rest4.avif", time: "50-60 min", location: "RamanadhaPuram" },
     { name: "Geetha Canteen", src: "./rest5.avif", time: "30-45 min", location: "GandhiPuram" },
-    { name: "A2B-Adayar Anandha Bavan", src: "./rest6.avif", time: "30-45 min", location: "GandhiPuram" }
+    { name: "A2B - Adyar Ananda Bhavan", src: "./rest6.avif", time: "30-45 min", location: "GandhiPuram" },
+    { name: "Subway", src: "./rest1.avif", time: "20-30 min", location: "Peelamedu" },
+    { name: "NagarKovil Arya Bhavan", src: "./rest2.avif", time: "35-50 min", location: "Peelamedu" },
+    { name: "Night Lion By Madhampatti", src: "./rest3.avif", time: "25-40 min", location: "Peelamedu" },
+    { name: "Thirupathi Mess", src: "./rest4.avif", time: "50-60 min", location: "RamanadhaPuram" },
+    { name: "Geetha Canteen", src: "./rest5.avif", time: "30-45 min", location: "GandhiPuram" },
+    { name: "A2B - Adyar Ananda Bhavan", src: "./rest6.avif", time: "30-45 min", location: "GandhiPuram" }
   ];
 
   const foods = [
@@ -23,7 +29,6 @@ export default function Foods() {
     { name: "Olio The World Fried Pizzaria", src: "./food6.avif", type: "veg", time: "20-30 min", location: "Ranganathapuram" },
     { name: "Chai Point", src: "./food7.avif", type: "veg", time: "35-50 min", location: "Saibaba Colony" }
   ];
-
 
   const filteredFoods = foods.filter((food) =>
     selectedCategory === null ? true : food.type === selectedCategory
@@ -37,25 +42,22 @@ export default function Foods() {
 
   const addToCart = (food) => {
     setCart([...cart, food]);
-    alert("Your food was added to the cart successfully!"); // Show success alert
+    alert("Added to cart! 🛒");
   };
 
   const placeOrder = () => {
     if (cart.length === 0) {
-      alert("Your cart is empty! Please add items before placing an order.");
+      alert("Your cart is empty! 🛒");
     } else {
-      alert("Your order has been placed successfully! 🎉");
-      setCart([]); // Clear cart after placing order
+      alert("Order placed successfully! 🎉");
+      setCart([]);
     }
   };
 
   return (
     <div className={styles.container}>
-   
       <div className={styles.filterContainer}>
-        <label style={{ marginLeft: "1400px" }}><b>Filter:</b></label>
-
-       
+        <label><b>Filter:</b></label>
         <select
           className={styles.filterDropdown}
           value={selectedCategory || "All"}
@@ -74,7 +76,6 @@ export default function Foods() {
         </div>
       </div>
 
-    
       <div className={styles.horizontalScroll}>
         {images.map((image, index) => (
           <div key={index} className={styles.card}>
@@ -90,8 +91,7 @@ export default function Foods() {
 
       <hr className={styles.separator} />
 
-      {/* Food Items */}
-      <h2 className={styles.sectionTitle}>Restaurants with online food delivery in Coimbatore</h2>
+      <h2 className={styles.sectionTitle}>Restaurants with online food delivery</h2>
       <div className={styles.horizontalScroll}>
         {filteredFoods.map((food, index) => (
           <div key={index} className={styles.card}>
@@ -106,25 +106,21 @@ export default function Foods() {
         ))}
       </div>
 
-    
       <hr className={styles.separator} />
       <h2 className={styles.sectionTitle}>Your Cart</h2>
       {cart.length === 0 ? (
         <p className={styles.emptyCart}>Your cart is empty</p>
       ) : (
-        <div>
-          <div className={styles.cartItems}>
-            {cart.map((item, index) => (
-              <div key={index} className={styles.cartItem}>
-                <img src={item.src} alt={item.name} className={styles.cartImage} />
-                <p className={styles.cartName}>{item.name}</p>
-              </div>
-            ))}
-          </div>
+        <div className={styles.cartItems}>
+          {cart.map((item, index) => (
+            <div key={index} className={styles.cartItem}>
+              <img src={item.src} alt={item.name} className={styles.cartImage} />
+              <p className={styles.cartName}>{item.name}</p>
+            </div>
+          ))}
           <button className={styles.placeOrderBtn} onClick={placeOrder}>Place Order</button>
         </div>
       )}
-     
     </div>
   );
 }
