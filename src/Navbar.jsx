@@ -10,12 +10,7 @@ import "./Navbar.css";
 
 function Navbar() {
  
-  const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".navlink");
-
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
+  
 
 
   return (
