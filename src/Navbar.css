@@ -1,59 +1,95 @@
-.li{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    
-}
-.navbar{
-    background-color: rgb(255, 38, 0);
-    height: 130px;
-}
-.navlink{
+/* Navbar container */
+.navbar {
     display: flex;
-    justify-content: space-around;
-    width: 40%;
-    margin-top:-10px;
-    margin-left: 10px;
-    list-style-type: none;
-    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(255,38,0);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
   
-}
-.input-box{
-    width:550px;
-    margin-left: 100px;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 15px;
-
-}
-.link{
-    color: white;
-    text-decoration: none;
-    font-size: larger;
-    
-    
-}
-.btn{
-    padding: 13px;
-    background:rgb(255, 38, 0) ;
-    border: 2px solid white;
+  /* Navbar header */
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 150px;
+    margin: 10px 0;
+  }
+  
+  /* Search box */
+  .input-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: -10px;
-    width: 200px;
-    margin-top: 4px;
-}
-
-.btn1{
-    padding: 15px;
-    width: 130px;
-    background:rgb(6, 6, 6) ;
-    border-radius: 10px;
-    margin-top: -50px;
-    margin-left: -15px;
-    margin-top: 4px;
-}
-
-
-
+  }
+  
+  /* Navbar links */
+  .navlink {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  
+  .navlink li {
+    margin: 10px 0;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    color: #ffffff;
+  }
+  
+  /* Mobile menu button */
+  .menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .menu-btn {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  
+    .navlink {
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 15px 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navlink.open {
+      display: flex;
+      background-color: rgb(255,38,0);
+    }
+    
+  }
+  
