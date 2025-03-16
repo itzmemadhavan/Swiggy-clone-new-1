@@ -10,6 +10,13 @@ import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".navlink");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
 
   return (
     <BrowserRouter>
