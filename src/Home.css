@@ -1,62 +1,72 @@
-  .bgimg1{
-    margin-top: -20px;
-    background-image: url('/4.jpg');
-        background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+/* General Styles */
+body {
+  font-family: sans-serif;
+}
+
+/* Grid Layout for Main Cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  background-image: url('/1.jpg');
+}
+
+.grid-item {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Scrollable Sections */
+.scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Instamart Section */
+.instamart-title {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Banner */
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .bgimg{
-    margin-top: -150px;
-    background-image: url('/2.jpg');  
-      background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
+  .scroll-img {
+    width: 120px;
+    height: 150px;
   }
-  img:hover{
-    transform: scale(1.1);
-    transition: 0.4s ease-in-out; ;
-    cursor: pointer;
+
+  .instamart-title {
+    font-size: 18px;
+    margin-left: 5px;
   }
-  
-  
-  .card{
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-  
-  }
-  .BTN{
-    padding: 10px;
-    background: rgb(23, 149, 23);
-    color: white;
-    border-radius: 10px;
-    font-family: sans-serif;
-  }
-  .BTN1{
-    padding: 10px;
-    background: rgb(130, 188, 130);
-    color: rgb(6, 97, 6);
-    border-radius: 10px;
-    font-family: sans-serif;
-  }
-  a{
-    text-decoration: none;
-    text-align: center;
-  }
-  
+}
