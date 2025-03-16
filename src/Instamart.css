@@ -1,25 +1,139 @@
-.nav-bar{
-    background-color: rgb(234, 230, 230);
-    width:1300px;
-    height:100%;
-    margin-left: 300px;
-}
-
-
-.content{
-    margin-left: 50px;
-    font-family: sans-serif;
+/* Container Styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .nav-bar img {
+    width: 60px;
+    margin: 5px;
+  }
+  
+  .nav-bar span {
+    font-size: 20px;
+    color: orangered;
+    text-align: center;
+  }
+  
+  /* Video Styling */
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Content Sections */
+  .content {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .content h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Image Grid */
+  .imgs,
+  .imgs1 {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 5px;
+  }
+  
+  /* Banner Styling */
+.banner {
+    width: 100%;  /* Takes full width of the screen */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    object-fit: cover; /* Ensures it covers properly */
+  }
+  
+  /* Mobile-Specific Adjustments */
+  @media (max-width: 768px) {
+    .banner {
+      width: 100vw; /* Ensures full viewport width */
+      height: auto; /* Prevents distortion */
+    }
+  }
+  
+  
+  /* Adjust for Mobile Screens */
+  @media (max-width: 768px) {
+    .nav-bar span {
+      font-size: 18px;
+    }
+  
+    .content h4 {
+      font-size: 16px;
+    }
+  
+    .imgs,
+    .imgs1 {
+      width: 80px;
+      height: 80px;
+    }
     
-}
-.imgs{
- width:150px;
- margin-left: 20px;
- margin-top: 10px;
-}
-.imgs1{
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    hr {
+      width: 10%;
+    }
+  }
+/* Ensuring the main container is centered */
+.instamart-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  /* Product Image Grid */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering images */
+    align-items: center;
+    gap: 10px; /* Adding spacing */
+  }
+  
+  /* Product Images */
+  .imgs,
+  .imgs1 {
+    width: 120px; /* Default size */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #f8f8f8; /* Light background for better visibility */
+    padding: 5px;
+  }
+  
+  /* Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Ensures proper alignment */
+      gap: 8px;
+      justify-content: center;
+    }
+  
+    .imgs,
+    .imgs1 {
+      width: 100px; /* Smaller size on mobile */
+    }
+  }
+  
+  
     
-        width:150px;
-        margin-left: 15px;
-        margin-top: 10px;
-       
-}
