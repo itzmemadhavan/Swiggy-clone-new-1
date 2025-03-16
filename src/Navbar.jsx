@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Home from "./Home";
 import Food from "./Food";
@@ -9,7 +9,7 @@ import { FiMenu, FiX } from "react-icons/fi"; // Import icons for mobile menu
 import "./Navbar.css";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+ 
   const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".navlink");
 
